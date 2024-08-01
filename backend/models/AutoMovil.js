@@ -5,7 +5,7 @@ const autoMovilSchema = new mongoose.Schema({
   descripcion: { type: String, required: true },
   anio: { type: Number, required: true },
   color: {type: String, required: true },
-  imagen: { type: String },  
+  imagen: { type: String , default: ''},  
 });
 
 module.exports = mongoose.model('automoviles', autoMovilSchema);

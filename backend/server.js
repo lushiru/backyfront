@@ -1,8 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const path = require("path");
-//const hechizosRoutes = require('./routes/hechizoRoutes');
+const autoMovilRoutes = require('./routes/autoMovilRoutes');
 require('dotenv').config(); 
 
 // Crear una instancia de la aplicación Express
@@ -13,10 +12,10 @@ app.use(cors()); // Permite solicitudes desde diferentes orígenes
 app.use(express.json()); 
 
 // Middleware para servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, "/public"))); 
+app.use("/imagenes",express.static("./imagenes")); 
 
 // Rutas
-//app.use('/api/hechizos', hechizosRoutes);
+app.use('/api/automovil', autoMovilRoutes);
 
 // Conexión a la base de datos
 mongoose.connect(process.env.MONGODB_URI)
