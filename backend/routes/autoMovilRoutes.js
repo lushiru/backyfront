@@ -15,10 +15,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Rutas para los hechizos
-//router.get('/', hechizoController.getHechizos);
-//router.get('/:id', hechizoController.getHechizoById);
+router.get('/', autoMovilController.getAutoMoviles);
+router.get('/:id', autoMovilController.getAutoMovilById);
 router.post('/', upload.single("imagen"), autoMovilController.createAutoMovil);
-//router.put('/:id', hechizoController.updateHechizo);
-//router.delete('/:id', hechizoController.deleteHechizo);
+router.put('/:id', upload.single("imagen"), autoMovilController.updateAutoMovil);
+router.delete('/:id', autoMovilController.deleteAutoMovil);
 
 module.exports = router;

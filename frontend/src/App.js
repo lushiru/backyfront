@@ -6,6 +6,9 @@ import Container from 'react-bootstrap/Container';
 import "./App.css"
 import CrearAuto from './components/autos/CrearAuto';
 import Footer from './components/footer/Footer';
+import DetalleAuto from './components/autos/DetalleAuto';
+import EditarAuto from './components/autos/EditarAuto';
+import EliminarAuto from './components/autos/EliminarAuto';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Routes>
             <Route path="/" element={<ListaAutos />} />
             <Route path="/crearauto" element={<CrearAuto />} />
+            <Route path="/detalle/:id" element={<DetalleAuto />} />
+            <Route path="/editar/:id" element={<EditarAuto />} />
+            <Route path="/eliminar/:id" element={<EliminarAuto />} />
       </Routes>  
     <Footer />  
     </Container>      
