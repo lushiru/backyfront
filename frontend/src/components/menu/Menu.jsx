@@ -10,8 +10,9 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Inicio</Nav.Link>
+            <Nav.Link href="/listaautos">Inicio</Nav.Link>
             <Nav.Link href="/crearauto">Crear Auto</Nav.Link>
+            <Nav.Link href="/apiexterna">Api Externa</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

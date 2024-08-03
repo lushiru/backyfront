@@ -26,7 +26,7 @@ export default function DetalleAuto() {
         setAnio(data.anio);
         setColor(data.color);
       } catch (error) {
-        console.error("Error al obtener hechizo:", error);
+        console.error("Error al obtener auto:", error);
       }
     };
 

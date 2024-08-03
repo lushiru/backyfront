@@ -9,6 +9,8 @@ import Footer from './components/footer/Footer';
 import DetalleAuto from './components/autos/DetalleAuto';
 import EditarAuto from './components/autos/EditarAuto';
 import EliminarAuto from './components/autos/EliminarAuto';
+import Home from './components/home/Home';
+import ApiExterna from './components/apiexterna/ApiExterna';
 
 function App() {
   return (
@@ -16,11 +18,13 @@ function App() {
     <Container fluid>  
     <Menu />
       <Routes>
-            <Route path="/" element={<ListaAutos />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/listaautos" element={<ListaAutos />} />
             <Route path="/crearauto" element={<CrearAuto />} />
             <Route path="/detalle/:id" element={<DetalleAuto />} />
             <Route path="/editar/:id" element={<EditarAuto />} />
             <Route path="/eliminar/:id" element={<EliminarAuto />} />
+            <Route path="/apiexterna" element={<ApiExterna />} />
       </Routes>  
     <Footer />  
     </Container>      
