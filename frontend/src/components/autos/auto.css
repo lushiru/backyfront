@@ -4,3 +4,7 @@ h1{
 a{
    text-decoration: none;
 }
+.aside{
+   background-color: chartreuse;
+   padding: 1rem;
+}

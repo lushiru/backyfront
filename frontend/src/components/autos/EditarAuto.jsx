@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "./auto.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function EditarAuto() {
@@ -14,7 +14,6 @@ export default function EditarAuto() {
   const [anio, setAnio] = useState("");
   const [color, setColor] = useState("");
   const [imagen, setImagen] = useState("");
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAuto = async () => {
@@ -55,7 +54,7 @@ export default function EditarAuto() {
         },
       });
       if (data) {
-        navigate("/");
+        window.location.href = "/";
       }
     } catch (error) {
       console.error("Error al editar el auto:", error);

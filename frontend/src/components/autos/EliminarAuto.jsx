@@ -1,11 +1,10 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import "./auto.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function EliminarAuto() {
   const { id } = useParams();
-  const navigate = useNavigate();
 
   const handleDelete = async () => {
     try {
@@ -16,7 +15,7 @@ export default function EliminarAuto() {
         }
       );
       if (response.ok) {
-        navigate("/");
+        window.location.href = "/";
       } else {
         console.error("Error al eliminar auto");
       }
@@ -26,7 +25,7 @@ export default function EliminarAuto() {
   };
 
   const handleVolver = () => {
-    navigate("/");
+    window.location.href = "/";
   };
 
   return (

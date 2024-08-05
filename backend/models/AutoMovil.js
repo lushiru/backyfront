@@ -6,6 +6,6 @@ const autoMovilSchema = new mongoose.Schema({
   anio: { type: Number, required: true },
   color: {type: String, required: true },
   imagen: { type: String , default: ''},  
-});
+}, { timestamps: true });
 
 module.exports = mongoose.model('automoviles', autoMovilSchema);

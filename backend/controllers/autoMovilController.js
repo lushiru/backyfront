@@ -81,3 +81,12 @@ exports.createAutoMovil = async (req, res) => {
       res.status(500).json({ message: err.message });
     }
   };
+
+  exports.getUltimosfive = async (req, res) => {
+    try {
+      const autoMoviles = await AutoMovil.find().sort({ 'updatedAt': -1 }).limit(5);
+      res.json(autoMoviles);
+    } catch (err) {
+      res.status(500).json({ message: err.message });
+    }
+  };

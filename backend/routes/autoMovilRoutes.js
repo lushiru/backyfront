@@ -16,6 +16,7 @@ const upload = multer({ storage: storage });
 
 // Rutas para los hechizos
 router.get('/', autoMovilController.getAutoMoviles);
+router.get('/ultimos', autoMovilController.getUltimosfive);
 router.get('/:id', autoMovilController.getAutoMovilById);
 router.post('/', upload.single("imagen"), autoMovilController.createAutoMovil);
 router.put('/:id', upload.single("imagen"), autoMovilController.updateAutoMovil);

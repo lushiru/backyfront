@@ -26,7 +26,11 @@ export default function Home() {
           mongo db
           <br></br>
           <hr></hr>
-          Tendra acceso una api externa ...
+          La api esta completa y muestra usuarios de una lista
+          <br></br>
+          <hr></hr>
+          al final se agrego un aside barra lateral que muestra ultimos 5
+          actualizaciones
         </Offcanvas.Body>
       </Offcanvas>
     </div>

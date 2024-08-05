@@ -4,7 +4,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "./auto.css";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function CrearAuto() {
@@ -13,7 +12,6 @@ export default function CrearAuto() {
   const [anio, setAnio] = useState("");
   const [color, setColor] = useState("");
   const [imagen, setImagen] = useState("");
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,7 +33,7 @@ export default function CrearAuto() {
         }
       );
       if (data) {
-        navigate("/");
+        window.location.href = "/";
       }
     } catch (error) {
       console.error("Error al crear el auto:", error);
