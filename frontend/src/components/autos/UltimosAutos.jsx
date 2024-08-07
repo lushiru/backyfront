@@ -25,7 +25,7 @@ export default function ListaAutos() {
 
   return (
     <div className="aside">
-      <h1>Ultimos Autos Actualizados</h1>
+      <h1>Ultimos Autos</h1>
 
       <Table>
         <thead>

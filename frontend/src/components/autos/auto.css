@@ -5,7 +5,7 @@ a{
    text-decoration: none;
 }
 .aside{
-   background-color: chartreuse;
+   background-color: rgb(189, 230, 148);
    padding: 1rem;
    max-width: 350px;
    float: right;
