@@ -23,7 +23,7 @@ export default function Home() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           Esta Pagina web fue creada con react + bootstrap + una base de datos
-          mongo db
+          mongo db + node js en backend
           <br></br>
           <hr></hr>
           La api esta completa y muestra usuarios de una lista

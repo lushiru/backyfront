@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Image from "react-bootstrap/Image";
+import Button from "react-bootstrap/Button";
 import "./auto.css";
 
 export default function ListaAutos() {
@@ -24,7 +25,7 @@ export default function ListaAutos() {
 
   return (
     <div className="aside">
-      <h1>Ultimos autos</h1>
+      <h1>Ultimos Autos Actualizados</h1>
 
       <Table>
         <thead>
@@ -36,11 +37,16 @@ export default function ListaAutos() {
           {autos.map((auto) => (
             <tr key={auto._id}>
               <td>
-                <Image
-                  src={`http://localhost:5001/imagenes/${auto.imagen}`}
-                  width="250px"
-                  rounded
-                />
+                <Button
+                  href={`/detalle/${auto._id}`}
+                  variant="outline-secondary"
+                >
+                  <Image
+                    src={`http://localhost:5001/imagenes/${auto.imagen}`}
+                    width="250px"
+                    rounded
+                  />
+                </Button>
               </td>
             </tr>
           ))}

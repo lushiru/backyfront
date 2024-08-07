@@ -36,7 +36,7 @@ export default function DetalleAuto() {
   return (
     <div>
       <h1>Detalle Auto</h1>
-      <Card style={{ width: "36rem" }}>
+      <Card style={{ maxWidth: "36rem" }}>
         <Card.Img variant="top" src={imagen} />
         <Card.Body>
           <Card.Title>{nombre}</Card.Title>

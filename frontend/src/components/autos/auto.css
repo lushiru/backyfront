@@ -7,4 +7,6 @@ a{
 .aside{
    background-color: chartreuse;
    padding: 1rem;
+   max-width: 350px;
+   float: right;
 }
